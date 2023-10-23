@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="multi-step">
+    <div class="blocks">
+      <div class="step" id="block-1">
+        <div class="auth-block">
+          <h1>Welcome!<br>It takes 2 only minutes</h1>
+          <div class="auth-wrapper">  
+            <label for="name">Name:</label>
+            <input name="name" type="text">
+            <label for="password">Password:</label>
+            <input type="password">
+            <label for="phone">Phone:</label>
+            <input type="number">
+          </div>
+        </div>
+      </div>
+      <div class="step" id="block-2">
+        <div class="locate-block">
+          <label for="country">Country:</label>
+          <input name="country" type="text">
+          <label for="city">City:</label>
+          <input name="city" type="text">
+          <label for="index">Post-Index:</label>
+          <input name="index" type="number">
+        </div>
+      </div>
+      <div class="step" id="block-3">
+        <div class="preference-block">
+          
+        </div> 
+      </div>
+      <div class="step" id="block-4">
+        <div class="submit-block">
+          <h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Consectetur, blanditiis eveniet ullam doloremque quo 
+            veritatis. Numquam minima sint dolore aspernatur.
+          </h1>
+          <div class="submit-wrapper">
+            <div class="canvas"></div>
+            <button class="clear-button">clear</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="prev" onclick="prevStep()">Prev</button>
+        <button class="next" onclick="nextStep()">Next</button>
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

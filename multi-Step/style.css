@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+.multi-step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+input, button{
+    color: black;
+    padding: 10px 8px;
+    font-size: 20px;
+}
+
+.blocks{
+    background-color: brown;
+    border-radius: 10px;
+    height: 700px;
+    width: 1200px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.auth-block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+}
+
+.auth-wrapper button{
+    width: 100%;
+}
+
+.locate-block{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.canvas{
+    border: 1px solid #000;
+    cursor: crosshair;
+    height: 350px;
+    width: 500px;
+    background-color: white;
+}
+
+.submit-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-wrapper{
+    display: flex;
+    flex-direction: column;   
+    gap: 10px;
+    width: 100%;
+}
+
+.clear-button{
+    width: 500px;
+    background-color: rgb(235, 57, 57);
+    border: 1px solid red;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.buttons button{
+    width: calc(50% - 5px);
+}
