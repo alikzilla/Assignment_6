@@ -1,72 +1,31 @@
-const wordsArray = [
-    "Sunshine",
-    "Strawberry",
-    "Satisfaction",
-    "Sanctuary",
-    "Serenity",
-    "Spectacular",
-    "Suspense",
-    "Superb",
-    "Symposium",
-    "Scrumptious",
-    "Swirling",
-    "Splendid",
-    "Sensation",
-    "Symphony",
-    "Sublime",
-    "Sweltering",
-    "Sovereign",
-    "Singular",
-    "Stardust",
-    "Stupendous",
-    "Spherical",
-    "Splendiferous",
-    "Succulent",
-    "Serendipity",
-    "Synthesize",
-    "Satisfaction",
-    "Splendorous",
-    "Satisfactory",
-    "Sumptuous",
-    "Shimmering",
-    "Synchronization",
-    "Sardonic",
-    "Sensitive",
-    "Substantial",
-    "Suspenseful",
-    "Sympathetic",
-    "Supernova",
-    "Succulence",
-    "Surreal",
-    "Sophisticated",
-    "Scrumptious",
-    "Supersonic",
-    "Stupendous",
-    "Spellbinding",
-    "Sunshine",
-    "Splendiferous",
-    "Solidarity",
-    "Sublime",
-    "Sensational",
-    "Spirited",
-    "Significant",
-  ];
-    
 const input = document.getElementById("wordInput");
 const ul = document.getElementById("wordList");
-  
-function updateList(){
-    const inputText = input.value;
-    ul.innerHTML = '';
 
-    if(inputText){
-        const filtered = wordsArray.filter(word => word.toLowerCase().startsWith(inputText.toLowerCase()));
-        filtered.forEach(word =>{
+async function fetchData() {
+    const url = `https://wordsapiv1.p.rapidapi.com/words/${input.value}/synonyms`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '18a89e43ecmsha20cf25d9070782p1b492djsn0efb3535765e',
+        'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+      }
+    };
+  
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+        const inputText = input.value;
+        ul.innerHTML = '';
+
+        result.synonyms.forEach((word) => {
             const li = document.createElement("li");
             li.textContent = word;
             ul.appendChild(li);
         });
+    } catch (error) {
+        console.error(error);
     }
 }
 
-setInterval(updateList, 500);
+setInterval(fetchData, 500);
